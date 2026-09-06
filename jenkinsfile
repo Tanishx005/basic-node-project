@@ -1,0 +1,37 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'YOUR_GITHUB_REPOSITORY_URL'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh '/usr/bin/npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh '/usr/bin/npm test'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'No build step required for this application'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Node.js application deployed successfully'
+            }
+        }
+    }
+}

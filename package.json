@@ -1,0 +1,12 @@
+{
+  "name": "basic-node-app",
+  "version": "1.0.0",
+  "description": "Basic Node.js application for Jenkins deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "author": "Tanx",
+  "license": "MIT"
+}
