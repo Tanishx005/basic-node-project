@@ -1,14 +1,7 @@
 pipeline {
-
     agent any
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                git 'YOUR_GITHUB_REPOSITORY_URL'
-            }
-        }
 
         stage('Install Dependencies') {
             steps {
@@ -24,13 +17,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'No build step required for this application'
+                echo 'Build completed'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Node.js application deployed successfully'
+                echo 'Application deployment completed'
             }
         }
     }
